@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-library</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <h1>Электронная библиотека</h1>
+        <aside>
+            <div id="edit_form">            
+                <form action="#" method="get" class="for_margin" id="book_info">
+                    <h3>Настройки</h3>
+                    <input type="hidden" name="id" value="NaN">
+                    <p>
+                        <label for="title">Название</label>
+                        <input name="title" placeholder="Введите название">
+                    </p>
+                    <p>
+                        <label for="author">Автор</label>
+                        <input name="author" placeholder="Введите автора">
+                    </p>
+                    <p>
+                        <label for="year">Год издания</label>
+                        <input name="year" placeholder="Введите год издания">
+                    </p>
+                    <p>
+                        <label for="pages_count">Количество страниц</label>
+                        <input name="pages_count" type="number" placeholder="Введите количество страниц">
+                    </p>
+                    <p class="center">
+                        <button>Сохранить</button>
+                    </p>
+                </form>            
+            </div>
+            <div>
+                <button id="clear_storage" onclick="clearStorage();">Очистить библиотеку</button>
+            </div>
+        </aside>
+        <div id="book_template" style="display: none;">
+            <div class="book" id="book##id##">
+                <p>##title## (##year##)</p>
+                <p>Автор:<span>##author##</span></p>
+                <div class="icons">
+                    <button class="edit_book" onclick="editBook(##id##)">&#128393;</button>
+                    <button class="delete_book" onclick="deleteBook(##id##)">&#10060;</button>
+                </div>
+            </div>
+        </div>
+        <div id="books_list"></div>
+    </body>
+</html>

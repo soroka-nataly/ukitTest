@@ -1,0 +1,75 @@
+aside {
+    float: left;
+    width: 20%;
+    min-width: 150px;
+    margin: 0 15px 15px 0;
+}
+
+#edit_form { 
+    display: inline-block;
+    border: 1px black solid;  
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#edit_form input{
+    width: 100%;    
+}
+
+.center{
+    text-align: center;    
+}
+
+#books_list {
+    width: 75%;
+    display: inline-block;  
+    vertical-align: top;
+}
+
+.for_margin {
+    margin: 0 30px;
+}
+
+.book {
+    display: inline-block;
+    width: 220px;
+    border: 1px black solid;
+    padding: 10px 15px;
+    margin: 0 15px 15px 0;
+    vertical-align: top;
+}
+
+.book:hover {
+    background-color: #fafafa;
+}
+
+.book:hover .icons {
+    visibility: visible;
+}
+
+.icons {
+    visibility: hidden;
+}
+
+.icons button{
+    font-size: 18px;
+}
+
+.error_msg {
+    color: red;
+    font-size: 14px;
+}
+
+#clear_storage {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+    }
+
+    #books_list {
+        width: 100%;
+    }
+}
